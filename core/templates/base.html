@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RWAMPS Youth Farmers - Empowering agriculture through technology and expertise.">
+    <title>{% block title %}RWAMPS Youth Farmers {% endblock %}</title>
+
+    <!-- Google Fonts: Covered By Your Grace -->
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind via CDN (Development only) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+</head>
+<body class="bg-white text-gray-900 font-sans">
+
+    <!-- Navbar -->
+    {% include 'partials/navbar.html' %}
+
+    <!-- Main Page Content -->
+    <main class="relative z-10">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    {% include 'partials/footer.html' %}
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
