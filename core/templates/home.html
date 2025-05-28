@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <section class="relative min-h-[80vh] bg-cover bg-center bg-no-repeat" style="background-image: url('{% static 'images/hero.png' %}')">
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div class="max-w-4xl mx-auto px-6 py-16 relative z-10 text-white">
+            <h4 class="uppercase text-sm mb-2" data-aos="fade-down" data-aos-delay="50">Welcome to Rwampsyouthfarmer</h4>
+            <h1 class="text-4xl md:text-6xl font-semibold mb-2" data-aos="fade-up"
+            style="font-family: 'Covered By Your Grace', cursive;" data-aos-delay="50">
+                Mordern <br />
+                Agriculture For<br /> 
+                Modern Future
+            </h1>
+            <p class="text-lg max-w-xl" data-aos="fade-up" data-aos-delay="100">
+                Empowering farmers with the right tools, resources, and practices to grow healthier food.
+            </p>
+            <div class="flex space-x-4">
+                <a href="{% url 'core:services' %}" class="inline-block mt-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-xs rounded-md transition" data-aos="fade-up" data-aos-delay="100">
+                    Discover More
+                </a>
+                <img data-aos="fade-left" data-aos-delay="100" src="{% static 'images/hero-leaf.png' %}" alt="leaf image">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="bg-gray-100 py-10">
+        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Feature 01 -->
+            <div data-aos="zoom-in" data-aos-delay="100"
+                class="bg-white rounded-xl shadow-lg px-8 py-6 text-center transition-transform hover:scale-105 duration-300">
+                <p class="text-sm text-yellow-400 font-medium mb-2" 
+                style="font-family: 'Covered By Your Grace', cursive;" data-aos-delay="50">
+                    Feature 01
+                </p>
+                <h3 class="text-lg font-bold mb-4">We're using a new technology</h3>
+                <img src="{% static 'images/tech.png' %}" alt="New Tech" class="mx-auto w-12 h-12 rounded-lg object-cover">
+            </div>
+
+            <!-- Feature 02 -->
+            <div data-aos="zoom-in" data-aos-delay="200"
+                class="bg-white rounded-xl shadow-lg px-8 py-6 text-center transition-transform hover:scale-105 duration-300">
+                <p class="text-sm text-yellow-400 font-medium mb-2"
+                style="font-family: 'Covered By Your Grace', cursive;">
+                    Feature 02
+                </p>
+                <h3 class="text-lg font-bold mb-4">Good in smart organic services</h3>
+                <img src="{% static 'images/organic.png' %}" alt="Smart Services" class="mx-auto w-12 h-12 rounded-lg object-cover">
+            </div>
+
+            <!-- Feature 03 -->
+            <div data-aos="zoom-in" data-aos-delay="300"
+                class="bg-white rounded-xl shadow-lg px-8 py-6 text-center transition-transform hover:scale-105 duration-300">
+                <p class="text-sm text-yellow-400 font-medium mb-2"
+                style="font-family: 'Covered By Your Grace', cursive;">
+                    Feature 03
+                </p>
+                <h3 class="text-lg font-bold mb-4">Reforming in the systems</h3>
+                <img src="{% static 'images/reform.png' %}" alt="System Reform" class="mx-auto w-12 h-12 rounded-lg object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-8 bg-gray-100 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Circle Images -->
+            <div class="relative w-full flex justify-center items-center" >
+                <div class="w-80 h-80 rounded-full overflow-hidden shadow-xl" data-aos="zoom-out">
+                    <img src="{% static 'images/farm.png' %}" alt="Farm Image" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute bottom-0 left-0 translate-x-[-5%] translate-y-[30%] w-40 h-40 
+                rounded-full overflow-hidden border-8 border-gray-100" data-aos="zoom-out-up">
+                    <img src="{% static 'images/hand-harvest.png' %}" alt="Hand Harvest" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Right Text Block -->
+            <div data-aos="fade-left" class="text-gray-700 space-y-4">
+                <p class="text-yellow-400 font-medium"
+                style="font-family: 'Covered By Your Grace', cursive;">
+                    Our Introductions
+                </p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug">
+                    Agriculture & Organic <br/> Product Farm
+                </h2>
+                <h3 class="text-green-600 text-lg font-semibold">
+                    Agrios is the largest global organic farm.
+                </h3>
+                <p class="text-sm leading-relaxed">
+                    The primary aim of modern contract farming is to secure a reliable supply of quality raw material inputs for Agro processing plant or export commodities for market firms, competitively, and securing export market through reputation and branding. Therefore, we must make efforts in installing effective contractual agricultural schemes that focus on setting up modern infrastructures and institutions' required help to meet our vision 2032.
+                </p>
+                <a href="#" class="inline-block mt-4 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded shadow transition">
+                    Discover More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section class="relative bg-[#f9f4f1] py-10">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <!-- Heading -->
+            <div class="mb-12" data-aos="fade-down">
+                <p class="text-yellow-400 font-medium mb-2"
+                style="font-family: 'Covered By Your Grace', cursive;">
+                    Our Services
+                </p>
+                <h2 class="text-3xl font-bold text-gray-900">What We Offer</h2>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-500 group">
+                    <img src="{% static 'images/service1.jpg' %}" alt="Agricultural Inputs"
+                        class="w-full h-64 object-cover group-hover:opacity-80 transition duration-300">
+                    <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">Agricultural Inputs</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-500 group">
+                    <img src="{% static 'images/service2.jpg' %}" alt="Agribusiness Consultancy"
+                        class="w-full h-64 object-cover group-hover:opacity-80 transition duration-300">
+                    <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">Agribusiness Consultancy Services</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-500 group">
+                    <img src="{% static 'images/service3.jpg' %}" alt="Commodity Trading"
+                        class="w-full h-64 object-cover group-hover:opacity-80 transition duration-300">
+                    <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">Commodity Trading</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8" data-aos="fade-up">Partners</h2>
+
+            <div class="flex flex-wrap justify-center items-center gap-12" data-aos="zoom-in-up" data-aos-delay="150">
+            {% for i in "12345678"|make_list %}
+                <img src="{% static 'images/partner'|add:i|add:'.png' %}" alt="Partner {{ i }}"
+                    class="h-12 sm:h-16 opacity-90 hover:opacity-100 transition duration-300">
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section class="relative max-w-6xl rounded-lg mx-auto min-h-[50vh] bg-cover bg-center bg-no-repeat" style="background-image: url('{% static 'images/agri-banner.png' %}')">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute inset-0 flex items-center justify-center z-10 px-4">
+            <div class="text-center text-white max-w-2xl" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold capitalize">
+                Agriculture Matters to the Future of Development
+            </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+     <section class="bg-gray-100 py-16">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <!-- Heading -->
+            <div class="mb-12" data-aos="fade-down">
+                <p class="text-yellow-400 font-medium mb-2"
+                style="font-family: 'Covered By Your Grace', cursive;">
+                    Recently Updated
+                </p>
+                <h2 class="text-3xl font-bold text-gray-900">Our Projects</h2>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-500 group">
+                    <img src="{% static 'images/service1.jpg' %}" alt="Agricultural Inputs"
+                        class="w-full h-64 object-cover group-hover:opacity-80 transition duration-300">
+                    <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">Easy Harvesting</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-500 group">
+                    <img src="{% static 'images/service2.jpg' %}" alt="Agribusiness Consultancy"
+                        class="w-full h-64 object-cover group-hover:opacity-80 transition duration-300">
+                    <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">Agriculture Farming</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-500 group">
+                    <img src="{% static 'images/service3.jpg' %}" alt="Commodity Trading"
+                        class="w-full h-64 object-cover group-hover:opacity-80 transition duration-300">
+                    <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">Ecological Farming</div>
+                </div>
+
+                <!-- Card 4 -->
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="relative overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-500 group">
+                    <img src="{% static 'images/service1.jpg' %}" alt="Commodity Trading"
+                        class="w-full h-64 object-cover group-hover:opacity-80 transition duration-300">
+                    <div class="absolute bottom-4 left-4 text-white text-sm font-semibold">Organic Farming</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-6 bg-gray-100 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Image -->
+            <div class="relative w-full flex justify-center items-center" >
+                <div class="w-full h-full rounded-md overflow-hidden shadow-xl" data-aos="zoom-out">
+                    <img src="{% static 'images/farm.png' %}" alt="Farm Image" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Right Text Block -->
+            <div data-aos="fade-left" class="text-gray-700 space-y-4">
+                <p class="text-yellow-400 font-medium"
+                style="font-family: 'Covered By Your Grace', cursive;">
+                    Our Farm Benefits
+                </p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug">
+                    Why Choose <br/> RWAMPS
+                </h2>
+                <p class="text-sm leading-relaxed">
+                    There are many variations of passages of available but the
+                    majortity have sufferred alteration in some form by injected
+                    humor or random word which don't look even.
+                </p>
+
+                <!-- Feature List -->
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0-6a9 9 0 100 18 9 9 0 000-18z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-semibold text-gray-900">Quality Organic Food</h4>
+                            <p class="text-sm text-gray-600">There are variation. You need to be sure there is anything hidden in the middle of text.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-semibold text-gray-900">Professional Farmers</h4>
+                            <p class="text-sm text-gray-600">There are variation. You need to be sure there is anything hidden in the middle of text.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-semibold text-gray-900">Quality Products</h4>
+                            <p class="text-sm text-gray-600">There are variation. You need to be sure there is anything hidden in the middle of text.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="inline-block mt-4 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded shadow transition">
+                    Discover More
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
