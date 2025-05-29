@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <!-- Banner Section -->
+    <section class="py-8 bg-gray-100 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Images -->
+            <div class="relative w-full flex justify-center items-center" >
+                <div class="w-80 h-96 rounded-md overflow-hidden shadow-xl" data-aos="zoom-out">
+                    <img src="{% static 'images/farm.png' %}" alt="Farm Image" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute bottom-0 left-0 translate-x-[-10%] translate-y-[30%] w-40 h-40 
+                rounded-md overflow-hidden" data-aos="zoom-out-up">
+                    <img src="{% static 'images/hand-harvest.png' %}" alt="Hand Harvest" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Right Text Block -->
+            <div data-aos="fade-left" class="text-gray-700 space-y-4">
+                <p class="text-yellow-400 font-medium"
+                style="font-family: 'Covered By Your Grace', cursive;">
+                    Get to Know Us
+                </p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug">
+                    About Us
+                </h2>
+                <p class="text-sm leading-relaxed">
+                    Rwamps Youths farmers Groups Limited (RYFA-GROUP) is a dynamic, state-of-the art, quality driven private 
+                    agribusiness company based in Uganda-Kampala. We aim to be a global leader of choice by providing premium 
+                    modern contract farming techniques. Focusing on increasing production, value addition, market leakage, 
+                    commercialisation and innovation for exclusive growth and sustainable development through
+                    modernisation and mechanisation while forging a better future for local farmers.
+                    We produce all year round products, conform to internationally recognised food and safety standards; 
+                    assuring customers of quality, traceability, reliability, and service delivery.
+                </p>
+                <a href="#" class="inline-block mt-4 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded shadow transition">
+                    Discover More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section data-aos="zoom-in-up" class="relative max-w-7xl mx-4 min-h-[50vh] bg-cover bg-center bg-no-repeat" style="background-image: url('{% static 'images/agri-banner.png' %}')">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/20"></div>
+    </section>
+
+    <!-- Mission, Vision, Motto Section -->
+    <section class="bg-gray-100 py-10">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Motto -->
+            <div data-aos="zoom-in" data-aos-delay="100"
+                class="bg-white rounded-xl border-2 border-blue-400 px-8 py-6 shadow hover:shadow-md transition-transform hover:scale-105 duration-300">
+                <div class="flex mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.5 0-2.25.75-3 2 1.5 0 2.25.75 3 2s1.5-.75 3-2c-.75-1.25-1.5-2-3-2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4" />
+                    </svg>
+                </div>
+                <h3 class="text-lg text-blue-400 font-medium mb-2">
+                    Motto
+                </h3>
+                <p class="text-md font-regular mb-2">Modern Agriculture for Modern Future</p>
+            </div>
+
+            <!-- Vision -->
+            <div data-aos="zoom-in" data-aos-delay="200"
+                class="bg-white rounded-xl border-2 border-yellow-400 px-8 py-6 shadow hover:shadow-md transition-transform hover:scale-105 duration-300">
+                <div class="flex mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2a10 10 0 11-7.07 17.07A10 10 0 0112 2z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6l4 2" />
+                    </svg>
+                </div>
+                <p class="text-lg text-yellow-400 font-medium mb-2">
+                    Vision
+                </p>
+                <h3 class="text-md font-regular mb-2">To be the leading provider of sustainable modern agricultural solutions.</h3>
+            </div>
+
+            <!-- Mission -->
+            <div data-aos="zoom-in" data-aos-delay="300"
+                class="bg-white rounded-xl border-2 border-purple-500 px-8 py-6 shadow hover:shadow-md transition-transform hover:scale-105 duration-300">
+                <div class="flex mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-3-3v6m7 4a9 9 0 11-14-7.68V9a3 3 0 016 0v.32a9 9 0 018 7.68z" />
+                    </svg>
+                </div>
+                <p class="text-lg text-purple-500 font-medium mb-2">
+                    Mission
+                </p>
+                <h3 class="text-md font-regular mb-2">To be the leading provider of sustainable modern agricultural solutions.</h3>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+{% endblock %}
