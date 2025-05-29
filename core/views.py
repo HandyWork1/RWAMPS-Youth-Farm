@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect,render, get_object_or_404
+from django.contrib import messages
 from .models import Service  # Import the Service model
+from .models import Subscriber  # Import the Subscriber model
 
 def home(request):
     return render(request, 'home.html')
@@ -17,3 +19,13 @@ def service_detail(request, slug):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def subscribe(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        if email and not Subscriber.objects.filter(email=email).exists():
+            Subscriber.objects.create(email=email)
+            messages.success(request, "Successfully subscribed to our newsletter!")
+        else:
+            messages.warning(request, "You're already subscribed.")
+    return redirect(request.META.get('HTTP_REFERER', 'core:home'))

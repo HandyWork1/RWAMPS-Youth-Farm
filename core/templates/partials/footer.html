@@ -98,7 +98,8 @@
                     80 broklyn golden street line <br/> New York, USA
                 </li>
             </ul>
-            <form action="#" method="POST" class="flex items-center mt-4">
+            <form action="{% url 'core:subscribe' %}" method="POST" class="flex items-center mt-4">
+                {% csrf_token %}
                 <input type="email" name="email" placeholder="Your Email Address"
                        class="w-full px-4 py-2 rounded-l-md focus:outline-none text-xs text-gray-800" required>
                 <div class="grid shrink-0 grid-cols-1 focus-within:relative">
