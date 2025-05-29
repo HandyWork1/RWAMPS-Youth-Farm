@@ -5,6 +5,7 @@ class Service(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField()
+    image = models.ImageField(upload_to='services/', blank=True, null=True)  
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
