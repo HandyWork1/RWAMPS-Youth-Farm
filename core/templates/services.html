@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services{% endblock %}
+
+{% block content %}
+    <!-- Banner Section -->
+    <section class="relative max-w-7xl mx-auto min-h-[50vh] bg-cover bg-center bg-no-repeat" style="background-image: url('{% static 'images/agri-banner.png' %}')">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute inset-0 flex items-center justify-center z-10 px-4">
+            <div class="text-center text-white max-w-2xl" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold capitalize">
+                Services
+            </h2>
+            <p class="mt-4 text-lg md:text-xl">
+                Currenly we offer the following categories of products and services.
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <p class="text-green-600 font-medium mb-2 uppercase tracking-wide"
+                style="font-family: 'Covered By Your Grace', cursive;">What We Offer</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Explore Our Services</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                {% for service in services %}
+                <div data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:"1" }}00" class="bg-white border-l-8 border-green-600 rounded-lg shadow p-6 flex items-center space-x-6 hover:shadow-lg transition">
+                    <!-- Icon placeholder -->
+                    <div class="flex-shrink-0 bg-green-100 p-4 rounded-full">
+                        <!-- Replace with a relevant Heroicon SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m2-4h.01M12 6a9 9 0 100 18 9 9 0 000-18z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ service.title }}</h3>
+                        <p class="text-gray-600 text-sm mb-4">{{ service.description|truncatewords:25 }}</p>
+                        <a href="{% url 'core:service_detail' service.slug %}" class="inline-block text-green-600 hover:underline font-medium text-sm">
+                            Learn more →
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            {% if not services %}
+            <div class="mt-12 text-center text-gray-500">
+                <p>No services available at the moment.</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

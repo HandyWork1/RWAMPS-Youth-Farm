@@ -5,6 +5,7 @@ from .models import Service, ContactMessage, Subscriber
 class ServiceAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'created_at')
     prepopulated_fields = {'slug': ('title',)}
+    fields = ('title', 'slug', 'description', 'image') 
 
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
